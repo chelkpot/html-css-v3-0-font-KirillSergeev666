@@ -1,22 +1,117 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="ru">
 <head>
-    
-    <title>Работа со шрифтами</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Текстовые стили - Практическое задание</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Изучаем свойства текста и шрифтов</h1>
+    <header>
+        <h1>CSS Стили для текста</h1>
+        <p class="subtitle">Практическое задание по оформлению текста с помощью CSS</p>
+    </header>
 
-    <p>
-        Это пример текста, в котором вы должны применить свойства CSS:
-        font-family, font-style, font-variant, font-weight, font-size,
-        text-decoration, text-align, text-indent и text-transform.
-    </p>
+    <main>
+        <section id="font-family">
+            <h2>1. Установка семейства шрифта</h2>
+            <p class="roboto-font">Этот текст использует шрифт Roboto.</p>
+            <p class="lora-font">А этот текст использует шрифт Lora.</p>
+            <p class="fallback-font">Этот текст демонстрирует систему резервных шрифтов: сначала пробуем Arial, если нет - Helvetica, иначе sans-serif.</p>
+        </section>
 
-    <p> 
-        При наведении курсора на этот текст, он должен изменится.
-    </p>
+        <section id="font-style">
+            <h2>2. Курсивное и наклонное начертание</h2>
+            <p class="italic-text">Этот текст отображается курсивом (italic).</p>
+            <p class="oblique-text">Этот текст отображается наклонным шрифтом (oblique).</p>
+            <p>А это обычный текст без специального начертания.</p>
+        </section>
 
-    <a href="#">Эту ссылку нужно сделать без подчеркивания</a>
+        <section id="small-caps">
+            <h2>3. Вариант малых заглавных букв</h2>
+            <p class="small-caps-text">Этот текст использует свойство font-variant: small-caps. Все буквы отображаются как заглавные, но строчные буквы отображаются в уменьшенном размере.</p>
+            <p>Для сравнения: обычный текст в UPPERCASE и lowercase.</p>
+        </section>
+
+        <section id="font-weight">
+            <h2>4. Жирный текст</h2>
+            <p class="bold-text">Этот текст имеет жирное начертание (font-weight: bold).</p>
+            <p class="bolder-text">Этот текст ещё жирнее (font-weight: 900).</p>
+            <p class="light-text">Этот текст наоборот, легче обычного (font-weight: 300).</p>
+        </section>
+
+        <section id="font-size">
+            <h2>5. Настройка размера шрифта</h2>
+            <p class="small-text">Этот текст имеет размер 14px (маленький).</p>
+            <p class="normal-text">Этот текст имеет размер 18px (обычный).</p>
+            <p class="large-text">Этот текст имеет размер 24px (большой).</p>
+            <p class="xlarge-text">Этот текст имеет размер 32px (очень большой).</p>
+        </section>
+
+        <section id="hover-effects">
+            <h2>6. Изменение внешнего вида при наведении</h2>
+            <p class="hover-text">Наведите курсор на этот текст, чтобы увидеть эффект.</p>
+            <div class="hover-box">
+                <p>Наведите на эту область, чтобы увидеть изменение цвета фона и текста.</p>
+            </div>
+        </section>
+
+        <section id="text-decoration">
+            <h2>7. Подчёркивание текста</h2>
+            <p class="underline-text">Этот текст подчёркнут (underline).</p>
+            <p class="overline-text">Этот текст имеет линию над текстом (overline).</p>
+            <p class="line-through-text">Этот текст зачёркнут (line-through).</p>
+        </section>
+
+        <section id="link-styling">
+            <h2>8. Ссылка без подчёркивания</h2>
+            <p>Обычная ссылка с подчёркиванием: <a href="#" class="regular-link">Пример ссылки</a></p>
+            <p>Ссылка без подчёркивания: <a href="#" class="no-underline-link">Пример ссылки без подчёркивания</a></p>
+            <p>Ссылка с подчёркиванием только при наведении: <a href="#" class="hover-link">Наведите на меня</a></p>
+        </section>
+
+        <section id="text-align">
+            <h2>9. Выравнивание текста по центру</h2>
+            <p class="center-text">Этот текст выровнен по центру. Он демонстрирует использование свойства text-align: center. Заметьте, как все строки этого абзаца центрированы относительно родительского элемента.</p>
+            <div class="align-container">
+                <p class="left-text">Этот текст выровнен по левому краю (обычное поведение).</p>
+                <p class="right-text">Этот текст выровнен по правому краю.</p>
+                <p class="justify-text">Этот текст выровнен по ширине. Обратите внимание, как пробелы между словами растягиваются, чтобы текст равномерно заполнял всю ширину контейнера.</p>
+            </div>
+        </section>
+
+        <section id="text-indent">
+            <h2>10. Отступ первой строки в абзаце</h2>
+            <p class="indent-text">Этот абзац имеет отступ первой строки. Обратите внимание, что первая строка начинается с отступа, в то время как остальные строки начинаются у края контейнера. Это традиционный способ оформления абзацев в печатных изданиях и некоторых веб-страницах.</p>
+            <p>А этот абзац не имеет отступа первой строки, что позволяет легко сравнить разницу между ними. Отступ первой строки помогает визуально отделить абзацы друг от друга, особенно когда между ними нет дополнительных отступов.</p>
+            <p class="indent-text">Ещё один абзац с отступом первой строки. Размер отступа обычно составляет 1.5-2em, что делает его пропорциональным размеру шрифта.</p>
+        </section>
+
+        <section id="text-transform">
+            <h2>11. Преобразование регистра текста</h2>
+            <p class="capitalize-text">этот текст использует transform: capitalize. каждая слово начинается с заглавной буквы.</p>
+            <p class="uppercase-text">Этот текст использует transform: uppercase. Весь текст отображается заглавными буквами.</p>
+            <p class="lowercase-text">Этот текст использует transform: lowercase. ВЕСЬ ТЕКСТ ОТОБРАЖАЕТСЯ СТРОЧНЫМИ БУКВАМИ.</p>
+            <p>Для сравнения: обычный текст с Различным Регистром Букв.</p>
+        </section>
+
+        <section id="combined">
+            <h2>Комбинирование свойств</h2>
+            <p class="combined-style">Этот текст демонстрирует комбинирование нескольких CSS-свойств: жирный шрифт, курсивное начертание, подчёркивание и преобразование регистра. Такое комбинирование позволяет создавать уникальные стили для различных элементов веб-страницы.</p>
+            <div class="styled-box">
+                <h3>Стилизованный блок</h3>
+                <p>Этот блок демонстрирует применение нескольких CSS-свойств одновременно для создания привлекательного оформления.</p>
+                <a href="#" class="styled-link">Стилизованная ссылка</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-text">Задание по CSS: оформление текста &copy; 2023</p>
+        <p class="instruction">Все стили заданы во внешнем файле style.css. В HTML-коде нет ни inline-стилей, ни тегов style.</p>
+    </footer>
 </body>
 </html>
